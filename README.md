@@ -3,7 +3,7 @@
 # Project description:
 Simple web local chat realization with Servlets. 
 
-- ~`login` with username
+- `login` with username
 - `send` message
 - `logout`
 - `refresh page`
