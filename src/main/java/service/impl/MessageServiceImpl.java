@@ -16,6 +16,6 @@ public class MessageServiceImpl implements MessageService {
 
     @Override
     public Message send(Message message) {
-        return messageDao.send(message);
+        return messageDao.save(message);
     }
 }

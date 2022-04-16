@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface GenericDao<T> {
-    T send(T element);
+    T save(T element);
 
     Optional<T> get(Long id);
 

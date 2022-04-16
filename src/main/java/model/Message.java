@@ -15,7 +15,7 @@ import lombok.ToString;
 public class Message {
     private Long id;
     @NonNull
-    private String username;
+    private Long userId;
     @NonNull
     private String content;
     @NonNull
