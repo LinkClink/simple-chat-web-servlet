@@ -9,7 +9,9 @@ CREATE TABLE `messages`  (
                             `user_id` bigint(0) UNSIGNED NOT NULL,
                             `content` varchar(500) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
                             `send_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-                            PRIMARY KEY (`id`) USING BTREE
+                            PRIMARY KEY (`id`) USING BTREE,
+                            INDEX `user_id`(`user_id`) USING BTREE,
+                            CONSTRAINT `user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 DROP TABLE IF EXISTS `users`;
