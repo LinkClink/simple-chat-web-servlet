@@ -29,9 +29,8 @@ public class AuthenticationFilter implements Filter {
         HttpServletResponse res = (HttpServletResponse) response;
         HttpServletRequest req = (HttpServletRequest) request;
         HttpSession session = req.getSession();
-        Object userName = session.getAttribute("username");
-        if (allowedUrl.contains(req.getServletPath()) || userName != null
-                && userName.toString().length() > 0) {
+        Long userId = (Long) session.getAttribute("userId");
+        if (allowedUrl.contains(req.getServletPath()) || userId != null) {
             chain.doFilter(req, res);
             return;
         }
